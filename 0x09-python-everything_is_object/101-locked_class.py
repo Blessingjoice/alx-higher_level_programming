@@ -1,4 +1,11 @@
 #!/usr/bin/python3
-def magic_string():
-    magic_string.n = getattr(magic_string, 'n', 0) + 1
-    return ("BestSchool, " * (magic_string.n - 1) + "BestSchool")
+"""Defines a locked class."""
+
+
+class LockedClass:
+    """
+    Prevent the user from instantiating new LockedClass attributes
+    for anything but attributes called 'first_name'.
+    """
+
+    __slots__ = ["first_name"]
